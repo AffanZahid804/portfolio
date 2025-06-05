@@ -78,20 +78,22 @@ function initTypingEffect() {
         const currentText = texts[textIndex];
         
         if (isDeleting) {
-            typingText.textContent = currentText.substring(0, charIndex - 1);
+            typingText.textContent = currentText.substring(0, charIndex);
             charIndex--;
             typeSpeed = 50;
         } else {
-            typingText.textContent = currentText.substring(0, charIndex + 1);
+            typingText.textContent = currentText.substring(0, charIndex);
             charIndex++;
             typeSpeed = 100;
         }
         
-        if (!isDeleting && charIndex === currentText.length) {
+        if (!isDeleting && charIndex > currentText.length) {
             typeSpeed = 2000; // Pause at end
             isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
+            charIndex = currentText.length;
+        } else if (isDeleting && charIndex < 0) {
             isDeleting = false;
+            charIndex = 0;
             textIndex = (textIndex + 1) % texts.length;
             typeSpeed = 500; // Pause before next word
         }
