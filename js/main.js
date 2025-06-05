@@ -402,7 +402,7 @@ window.addEventListener('error', function(e) {
 
 // Console welcome message
 console.log(`
-🚀 Welcome to John Doe's Portfolio!
+🚀 Welcome to Alex Carter's Portfolio!
 🎨 Built with vanilla HTML, CSS, and JavaScript
 💡 Featuring glassmorphism design and smooth animations
 📱 Fully responsive and accessible
