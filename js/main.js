@@ -62,6 +62,11 @@ function initNavigation() {
 // Typing effect for hero section
 function initTypingEffect() {
     const typingText = document.getElementById('typing-text');
+    if (!typingText) {
+        console.log('Typing text element not found');
+        return;
+    }
+    
     const texts = [
         'Creative Frontend Developer',
         'Web Developer',
@@ -72,39 +77,42 @@ function initTypingEffect() {
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    let typeSpeed = 100;
     
     function type() {
         const currentText = texts[textIndex];
         
-        if (isDeleting) {
-            typingText.textContent = currentText.substring(0, charIndex);
-            charIndex--;
-            typeSpeed = 50;
-        } else {
-            typingText.textContent = currentText.substring(0, charIndex);
+        if (!isDeleting) {
+            // Typing characters
+            typingText.textContent = currentText.substring(0, charIndex + 1);
             charIndex++;
-            typeSpeed = 100;
+            
+            if (charIndex === currentText.length) {
+                // Finished typing, pause then start deleting
+                isDeleting = true;
+                setTimeout(type, 2000);
+                return;
+            }
+        } else {
+            // Deleting characters
+            typingText.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+            
+            if (charIndex === 0) {
+                // Finished deleting, move to next text
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(type, 500);
+                return;
+            }
         }
         
-        if (!isDeleting && charIndex > currentText.length) {
-            typeSpeed = 2000; // Pause at end
-            isDeleting = true;
-            charIndex = currentText.length;
-        } else if (isDeleting && charIndex < 0) {
-            isDeleting = false;
-            charIndex = 0;
-            textIndex = (textIndex + 1) % texts.length;
-            typeSpeed = 500; // Pause before next word
-        }
-        
-        setTimeout(type, typeSpeed);
+        // Continue typing/deleting
+        const speed = isDeleting ? 50 : 100;
+        setTimeout(type, speed);
     }
     
-    // Start typing effect
-    if (typingText) {
-        type();
-    }
+    // Start the animation
+    type();
 }
 
 // Contact form functionality
