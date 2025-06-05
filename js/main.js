@@ -63,10 +63,10 @@ function initNavigation() {
 function initTypingEffect() {
     const typingText = document.getElementById('typing-text');
     const texts = [
-        'Frontend Developer',
-        'UI/UX Enthusiast', 
-        'Creative Problem Solver',
-        'Digital Craftsman'
+        'Creative Frontend Developer',
+        'Web Developer',
+        'UI Designer',
+        'JavaScript Enthusiast'
     ];
     
     let textIndex = 0;
