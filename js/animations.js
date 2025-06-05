@@ -419,30 +419,30 @@ class CustomCursor {
 
 // Initialize all animation effects
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize scroll animator
-    new ScrollAnimator();
+    // // Initialize scroll animator
+    // new ScrollAnimator();
 
-    // Initialize parallax effect
-    new ParallaxEffect();
+    // // Initialize parallax effect
+    // new ParallaxEffect();
 
-    // Initialize magnetic effect
-    new MagneticEffect();
+    // // Initialize magnetic effect
+    // new MagneticEffect();
 
-    // Initialize text reveal
-    new TextReveal();
+    // // Initialize text reveal
+    // new TextReveal();
 
-    // Initialize custom cursor
-    new CustomCursor();
+    // // Initialize custom cursor
+    // new CustomCursor();
 
-    // Initialize particle effect for hero section
-    const heroSection = document.querySelector('.hero');
-    if (heroSection) {
-        new ParticleEffect(heroSection);
-    }
+    // // Initialize particle effect for hero section
+    // const heroSection = document.querySelector('.hero');
+    // if (heroSection) {
+    //     new ParticleEffect(heroSection);
+    // }
 
-    // Add loading animation to page
-    document.body.style.opacity = '0';
-    AnimationUtils.animate(document.body, { opacity: 1 }, 1000, 'easeOutQuad');
+    // // Add loading animation to page
+    // document.body.style.opacity = '0';
+    // AnimationUtils.animate(document.body, { opacity: 1 }, 1000, 'easeOutQuad');
 });
 
 // Performance monitoring

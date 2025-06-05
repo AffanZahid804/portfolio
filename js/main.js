@@ -10,7 +10,7 @@ function initializeApp() {
     initNavigation();
     initTypingEffect();
     initContactForm();
-    initScrollReveal();
+    // initScrollReveal();
     initSmoothScrolling();
     initScrollSpy();
 }
@@ -63,13 +63,15 @@ function initNavigation() {
 function initTypingEffect() {
     const typingText = document.getElementById('typing-text');
     if (!typingText) {
-        console.log('Typing text element not found');
+        console.error('Typing text element not found');
         return;
     }
     
+    console.log('Typing element found, starting animation...');
+    
     const texts = [
         'Creative Frontend Developer',
-        'Web Developer',
+        'Web Developer', 
         'UI Designer',
         'JavaScript Enthusiast'
     ];
@@ -82,23 +84,19 @@ function initTypingEffect() {
         const currentText = texts[textIndex];
         
         if (!isDeleting) {
-            // Typing characters
-            typingText.textContent = currentText.substring(0, charIndex + 1);
             charIndex++;
+            typingText.textContent = currentText.substring(0, charIndex);
             
             if (charIndex === currentText.length) {
-                // Finished typing, pause then start deleting
                 isDeleting = true;
                 setTimeout(type, 2000);
                 return;
             }
         } else {
-            // Deleting characters
-            typingText.textContent = currentText.substring(0, charIndex - 1);
             charIndex--;
+            typingText.textContent = currentText.substring(0, charIndex);
             
             if (charIndex === 0) {
-                // Finished deleting, move to next text
                 isDeleting = false;
                 textIndex = (textIndex + 1) % texts.length;
                 setTimeout(type, 500);
@@ -106,13 +104,15 @@ function initTypingEffect() {
             }
         }
         
-        // Continue typing/deleting
-        const speed = isDeleting ? 50 : 100;
-        setTimeout(type, speed);
+        setTimeout(type, isDeleting ? 50 : 100);
     }
     
-    // Start the animation
-    type();
+    // Test if element can be modified
+    typingText.textContent = 'Testing...';
+    setTimeout(() => {
+        typingText.textContent = '';
+        type();
+    }, 1000);
 }
 
 // Contact form functionality
@@ -290,26 +290,26 @@ function initScrollSpy() {
 
 // Scroll reveal animations
 function initScrollReveal() {
-    const revealElements = document.querySelectorAll('.glass-card, .project-card, .timeline-item, .skill-item');
+    // const revealElements = document.querySelectorAll('.glass-card, .project-card, .timeline-item, .skill-item');
     
-    function revealOnScroll() {
-        revealElements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            const elementVisible = 150;
+    // function revealOnScroll() {
+    //     revealElements.forEach(element => {
+    //         const elementTop = element.getBoundingClientRect().top;
+    //         const elementVisible = 150;
             
-            if (elementTop < window.innerHeight - elementVisible) {
-                element.classList.add('reveal');
-            }
-        });
-    }
+    //         if (elementTop < window.innerHeight - elementVisible) {
+    //             element.classList.add('reveal');
+    //         }
+    //     });
+    // }
     
-    // Add reveal classes with staggered delays
-    revealElements.forEach((element, index) => {
-        element.style.transitionDelay = `${index * 0.1}s`;
-    });
+    // // Add reveal classes with staggered delays
+    // revealElements.forEach((element, index) => {
+    //     element.style.transitionDelay = `${index * 0.1}s`;
+    // });
     
-    window.addEventListener('scroll', throttle(revealOnScroll, 100));
-    revealOnScroll(); // Initial call
+    // window.addEventListener('scroll', throttle(revealOnScroll, 100));
+    // revealOnScroll(); // Initial call
 }
 
 // Utility function to throttle scroll events
@@ -339,24 +339,24 @@ function debounce(func, wait) {
 }
 
 // Skill item hover effects
-document.addEventListener('DOMContentLoaded', function() {
-    const skillItems = document.querySelectorAll('.skill-item');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const skillItems = document.querySelectorAll('.skill-item');
     
-    skillItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            const skill = this.getAttribute('data-skill');
-            if (skill) {
-                // Add pulse animation
-                this.style.animation = 'pulse 0.6s ease-in-out';
+//     skillItems.forEach(item => {
+//         item.addEventListener('mouseenter', function() {
+//             const skill = this.getAttribute('data-skill');
+//             if (skill) {
+//                 // Add pulse animation
+//                 this.style.animation = 'pulse 0.6s ease-in-out';
                 
-                // Reset animation
-                setTimeout(() => {
-                    this.style.animation = '';
-                }, 600);
-            }
-        });
-    });
-});
+//                 // Reset animation
+//                 setTimeout(() => {
+//                     this.style.animation = '';
+//                 }, 600);
+//             }
+//         });
+//     });
+// });
 
 // Performance optimization: Lazy load images
 function initLazyLoading() {
