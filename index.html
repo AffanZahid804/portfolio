@@ -1,480 +1,613 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Carter - Creative Frontend Developer</title>
-    <meta name="description" content="Creative Frontend Developer specializing in modern web technologies and UI/UX design">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/responsive.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h3>Alex Carter</h3>
-            </div>
-            
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#resume" class="nav-link">Resume</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                
-                <button class="theme-toggle" id="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-            
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Affan Zahid - Full Stack Developer</title>
+        <meta
+            name="description"
+            content="Full Stack Developer specializing in modern web technologies and complete application development"
+        />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">Hi, I'm <span class="gradient-text">Alex Carter</span></h1>
-                <div class="hero-subtitle">
-                    <span class="typing-text" id="typing-text"></span>
-                    <span class="cursor">|</span>
-                </div>
-                <p class="hero-description">
-                    I'm a passionate frontend developer with 3+ years of experience crafting responsive, 
-                    user-friendly websites. I specialize in turning designs into interactive experiences.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-container">
-                    <img src="https://via.placeholder.com/350x350/4F46E5/FFFFFF?text=AC" alt="Alex Carter - Frontend Developer" class="profile-img">
-                    <div class="image-glow"></div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow">
-                <i class="fas fa-chevron-down"></i>
-            </div>
-        </div>
-    </section>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know me better</p>
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="styles/responsive.css" />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h3>Affan Zahid</h3>
+                </div>
+
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#resume" class="nav-link">Resume</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="glass-card">
-                        <h3>Hello! I'm Alex Carter</h3>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Affan Zahid</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        I'm a passionate frontend developer with 3+ years of
+                        experience crafting responsive, user-friendly websites.
+                        I specialize in turning designs into interactive
+                        experiences.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary"
+                            >View My Work</a
+                        >
+                        <a href="#contact" class="btn btn-secondary"
+                            >Get In Touch</a
+                        >
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img
+                            src="https://via.placeholder.com/350x350/4F46E5/FFFFFF?text=AC"
+                            alt="Affan Zahid - Full Stack Developer"
+                            class="profile-img"
+                        />
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">Get to know me better</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="glass-card">
+                            <h3>Hello! I'm Affan Zahid</h3>
+                            <p>
+                                I'm a passionate full stack developer with 3+
+                                years of experience building complete web
+                                applications. I specialize in both frontend and
+                                backend development using modern technologies
+                                and have expertise in database design and API
+                                development.
+                            </p>
+                            <p>
+                                When I'm not coding, you can find me exploring
+                                new design trends, contributing to open-source
+                                projects, or sharing my knowledge through
+                                technical writing and mentoring.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="skills-container">
+                        <div class="glass-card">
+                            <h3>Skills & Technologies</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item" data-skill="HTML5">
+                                    <i class="fab fa-html5"></i>
+                                    <span>HTML5</span>
+                                </div>
+                                <div class="skill-item" data-skill="CSS3">
+                                    <i class="fab fa-css3-alt"></i>
+                                    <span>CSS3</span>
+                                </div>
+                                <div class="skill-item" data-skill="JavaScript">
+                                    <i class="fab fa-js-square"></i>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="skill-item" data-skill="React">
+                                    <i class="fab fa-react"></i>
+                                    <span>React</span>
+                                </div>
+                                <div class="skill-item" data-skill="Node.js">
+                                    <i class="fab fa-node-js"></i>
+                                    <span>Node.js</span>
+                                </div>
+                                <div class="skill-item" data-skill="Git">
+                                    <i class="fab fa-git-alt"></i>
+                                    <span>Git</span>
+                                </div>
+                                <div class="skill-item" data-skill="Sass">
+                                    <i class="fab fa-sass"></i>
+                                    <span>Sass</span>
+                                </div>
+                                <div class="skill-item" data-skill="Figma">
+                                    <i class="fab fa-figma"></i>
+                                    <span>Figma</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Some of my recent work</p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img
+                                src="https://via.placeholder.com/400x250/4F46E5/FFFFFF?text=PortfolioPro"
+                                alt="PortfolioPro"
+                            />
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-sm btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Live Demo
+                                    </a>
+                                    <a
+                                        href="https://github.com/alexcarter"
+                                        class="btn btn-sm btn-secondary"
+                                    >
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>PortfolioPro</h3>
+                            <p>
+                                A modern portfolio website template with
+                                glassmorphism design, dark mode support, and
+                                smooth animations. Built with vanilla HTML, CSS,
+                                and JavaScript for optimal performance.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img
+                                src="https://via.placeholder.com/400x250/7C3AED/FFFFFF?text=TaskTracker"
+                                alt="TaskTracker"
+                            />
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-sm btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Live Demo
+                                    </a>
+                                    <a
+                                        href="https://github.com/alexcarter"
+                                        class="btn btn-sm btn-secondary"
+                                    >
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>TaskTracker</h3>
+                            <p>
+                                A collaborative task management application with
+                                real-time updates, drag-and-drop functionality,
+                                and team collaboration features. Built for
+                                productivity and ease of use.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img
+                                src="https://via.placeholder.com/400x250/EC4899/FFFFFF?text=WeatherApp"
+                                alt="WeatherApp"
+                            />
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-sm btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Live Demo
+                                    </a>
+                                    <a
+                                        href="https://github.com/alexcarter"
+                                        class="btn btn-sm btn-secondary"
+                                    >
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>WeatherApp</h3>
+                            <p>
+                                A modern weather application with location-based
+                                forecasts, interactive maps, and detailed
+                                weather analytics. Features clean UI and
+                                real-time data updates.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <img
+                                src="https://via.placeholder.com/400x250/10B981/FFFFFF?text=EcoShop"
+                                alt="EcoShop"
+                            />
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-sm btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Live Demo
+                                    </a>
+                                    <a
+                                        href="https://github.com/alexcarter"
+                                        class="btn btn-sm btn-secondary"
+                                    >
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>EcoShop</h3>
+                            <p>
+                                A sustainable e-commerce platform focused on
+                                eco-friendly products. Features user
+                                authentication, shopping cart, and payment
+                                integration with modern design.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Experience & Education</h2>
+                    <p class="section-subtitle">My professional journey</p>
+                </div>
+
+                <div class="resume-content">
+                    <div class="timeline">
+                        <div class="timeline-item glass-card">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2022 - Present</div>
+                                <h3>Frontend Developer</h3>
+                                <h4>PixelCraft Studios</h4>
+                                <p>
+                                    Leading frontend development for client web
+                                    applications, creating responsive designs,
+                                    and implementing modern JavaScript
+                                    solutions. Improved website performance by
+                                    35% and enhanced user experience across
+                                    multiple projects.
+                                </p>
+                                <div class="timeline-skills">
+                                    <span>JavaScript</span>
+                                    <span>CSS3</span>
+                                    <span>React</span>
+                                    <span>UI/UX</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item glass-card">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2021 - 2022</div>
+                                <h3>Web Development Intern</h3>
+                                <h4>DevStudio Agency</h4>
+                                <p>
+                                    Assisted in developing responsive websites
+                                    for small businesses, learned modern web
+                                    technologies, and collaborated with senior
+                                    developers on client projects. Gained
+                                    hands-on experience with version control and
+                                    agile methodologies.
+                                </p>
+                                <div class="timeline-skills">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                    <span>Git</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item glass-card">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2019 - 2020</div>
+                                <h3>Junior Web Developer</h3>
+                                <h4>StartUp Studio</h4>
+                                <p>
+                                    Built and maintained company websites,
+                                    implemented responsive designs, and gained
+                                    experience in full-stack development while
+                                    working in an agile environment.
+                                </p>
+                                <div class="timeline-skills">
+                                    <span>HTML/CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>PHP</span>
+                                    <span>MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item glass-card">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2018 - 2021</div>
+                                <h3>B.Sc. Computer Science</h3>
+                                <h4>ABC University</h4>
+                                <p>
+                                    Graduated with honors, specializing in web
+                                    technologies and software engineering.
+                                    Completed multiple projects including a
+                                    final year project on modern web frameworks.
+                                </p>
+                                <div class="timeline-skills">
+                                    <span>Computer Science</span>
+                                    <span>Web Development</span>
+                                    <span>Software Engineering</span>
+                                    <span>Data Structures</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">
+                        Let's work together on your next project
+                    </p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="glass-card">
+                            <h3>Let's Connect</h3>
+                            <p>
+                                I'm always open to discussing new opportunities,
+                                interesting projects, or just having a chat
+                                about web development and design.
+                            </p>
+
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>alex.carter@email.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>San Francisco, CA</span>
+                            </div>
+
+                            <div class="social-links">
+                                <a
+                                    href="https://github.com/alexcarter"
+                                    class="social-link"
+                                >
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a
+                                    href="https://linkedin.com/in/alexcarter"
+                                    class="social-link"
+                                >
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a
+                                    href="https://twitter.com/alexcarter"
+                                    class="social-link"
+                                >
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a
+                                    href="https://dribbble.com/alexcarter"
+                                    class="social-link"
+                                >
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <div class="glass-card">
+                            <form class="contact-form" id="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        value="John Doe"
+                                        required
+                                    />
+                                    <span class="error-message"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        value="john@example.com"
+                                        required
+                                    />
+                                    <span class="error-message"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input
+                                        type="text"
+                                        id="subject"
+                                        name="subject"
+                                        value="Project Collaboration"
+                                        required
+                                    />
+                                    <span class="error-message"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        rows="5"
+                                        required
+                                    >
+Hi Alex, I'd like to work with you on an exciting web development project. Looking forward to hearing from you!</textarea
+                                    >
+                                    <span class="error-message"></span>
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary btn-full"
+                                >
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-loading">
+                                        <i class="fas fa-spinner fa-spin"></i>
+                                        Sending...
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Modal -->
+            <div class="modal" id="success-modal">
+                <div class="modal-content glass-card">
+                    <div class="modal-header">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Message Sent Successfully!</h3>
+                    </div>
+                    <div class="modal-body">
                         <p>
-                            I'm a passionate frontend developer with 3+ years of experience crafting responsive, 
-                            user-friendly websites. I specialize in turning designs into interactive experiences 
-                            using modern web technologies and have a keen eye for UI/UX design.
-                        </p>
-                        <p>
-                            When I'm not coding, you can find me exploring new design trends, 
-                            contributing to open-source projects, or sharing my knowledge through 
-                            technical writing and mentoring.
+                            Thank you for your message. I'll get back to you as
+                            soon as possible!
                         </p>
                     </div>
-                </div>
-                
-                <div class="skills-container">
-                    <div class="glass-card">
-                        <h3>Skills & Technologies</h3>
-                        <div class="skills-grid">
-                            <div class="skill-item" data-skill="HTML5">
-                                <i class="fab fa-html5"></i>
-                                <span>HTML5</span>
-                            </div>
-                            <div class="skill-item" data-skill="CSS3">
-                                <i class="fab fa-css3-alt"></i>
-                                <span>CSS3</span>
-                            </div>
-                            <div class="skill-item" data-skill="JavaScript">
-                                <i class="fab fa-js-square"></i>
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="skill-item" data-skill="React">
-                                <i class="fab fa-react"></i>
-                                <span>React</span>
-                            </div>
-                            <div class="skill-item" data-skill="Node.js">
-                                <i class="fab fa-node-js"></i>
-                                <span>Node.js</span>
-                            </div>
-                            <div class="skill-item" data-skill="Git">
-                                <i class="fab fa-git-alt"></i>
-                                <span>Git</span>
-                            </div>
-                            <div class="skill-item" data-skill="Sass">
-                                <i class="fab fa-sass"></i>
-                                <span>Sass</span>
-                            </div>
-                            <div class="skill-item" data-skill="Figma">
-                                <i class="fab fa-figma"></i>
-                                <span>Figma</span>
-                            </div>
-                        </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" id="close-modal">
+                            Close
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
-            </div>
-            
-            <div class="projects-grid">
-                <div class="project-card glass-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/4F46E5/FFFFFF?text=PortfolioPro" alt="PortfolioPro">
-                        <div class="project-overlay">
-                            <div class="project-actions">
-                                <a href="#" class="btn btn-sm btn-primary">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                                <a href="https://github.com/alexcarter" class="btn btn-sm btn-secondary">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                            </div>
-                        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-text">
+                        <p>&copy; 2024 John Doe. All rights reserved.</p>
                     </div>
-                    <div class="project-content">
-                        <h3>PortfolioPro</h3>
-                        <p>A modern portfolio website template with glassmorphism design, dark mode support, and smooth animations. Built with vanilla HTML, CSS, and JavaScript for optimal performance.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Responsive</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card glass-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/7C3AED/FFFFFF?text=TaskTracker" alt="TaskTracker">
-                        <div class="project-overlay">
-                            <div class="project-actions">
-                                <a href="#" class="btn btn-sm btn-primary">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                                <a href="https://github.com/alexcarter" class="btn btn-sm btn-secondary">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>TaskTracker</h3>
-                        <p>A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features. Built for productivity and ease of use.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Responsive</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card glass-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/EC4899/FFFFFF?text=WeatherApp" alt="WeatherApp">
-                        <div class="project-overlay">
-                            <div class="project-actions">
-                                <a href="#" class="btn btn-sm btn-primary">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                                <a href="https://github.com/alexcarter" class="btn btn-sm btn-secondary">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>WeatherApp</h3>
-                        <p>A modern weather application with location-based forecasts, interactive maps, and detailed weather analytics. Features clean UI and real-time data updates.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">API</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card glass-card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/10B981/FFFFFF?text=EcoShop" alt="EcoShop">
-                        <div class="project-overlay">
-                            <div class="project-actions">
-                                <a href="#" class="btn btn-sm btn-primary">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                                <a href="https://github.com/alexcarter" class="btn btn-sm btn-secondary">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>EcoShop</h3>
-                        <p>A sustainable e-commerce platform focused on eco-friendly products. Features user authentication, shopping cart, and payment integration with modern design.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Stripe</span>
-                        </div>
+                    <div class="footer-links">
+                        <a href="#home">Back to Top</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </footer>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Experience & Education</h2>
-                <p class="section-subtitle">My professional journey</p>
-            </div>
-            
-            <div class="resume-content">
-                <div class="timeline">
-                    <div class="timeline-item glass-card">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">2022 - Present</div>
-                            <h3>Frontend Developer</h3>
-                            <h4>PixelCraft Studios</h4>
-                            <p>
-                                Leading frontend development for client web applications, creating responsive designs, 
-                                and implementing modern JavaScript solutions. Improved website performance by 35% 
-                                and enhanced user experience across multiple projects.
-                            </p>
-                            <div class="timeline-skills">
-                                <span>JavaScript</span>
-                                <span>CSS3</span>
-                                <span>React</span>
-                                <span>UI/UX</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item glass-card">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">2021 - 2022</div>
-                            <h3>Web Development Intern</h3>
-                            <h4>DevStudio Agency</h4>
-                            <p>
-                                Assisted in developing responsive websites for small businesses, learned modern web technologies, 
-                                and collaborated with senior developers on client projects. Gained hands-on experience with version control and agile methodologies.
-                            </p>
-                            <div class="timeline-skills">
-                                <span>HTML5</span>
-                                <span>CSS3</span>
-                                <span>JavaScript</span>
-                                <span>Git</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item glass-card">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">2019 - 2020</div>
-                            <h3>Junior Web Developer</h3>
-                            <h4>StartUp Studio</h4>
-                            <p>
-                                Built and maintained company websites, implemented responsive designs, 
-                                and gained experience in full-stack development while working in an agile environment.
-                            </p>
-                            <div class="timeline-skills">
-                                <span>HTML/CSS</span>
-                                <span>JavaScript</span>
-                                <span>PHP</span>
-                                <span>MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item glass-card">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">2018 - 2021</div>
-                            <h3>B.Sc. Computer Science</h3>
-                            <h4>ABC University</h4>
-                            <p>
-                                Graduated with honors, specializing in web technologies and software engineering. 
-                                Completed multiple projects including a final year project on modern web frameworks.
-                            </p>
-                            <div class="timeline-skills">
-                                <span>Computer Science</span>
-                                <span>Web Development</span>
-                                <span>Software Engineering</span>
-                                <span>Data Structures</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's work together on your next project</p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="glass-card">
-                        <h3>Let's Connect</h3>
-                        <p>
-                            I'm always open to discussing new opportunities, interesting projects, 
-                            or just having a chat about web development and design.
-                        </p>
-                        
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>alex.carter@email.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+1 (555) 123-4567</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>San Francisco, CA</span>
-                        </div>
-                        
-                        <div class="social-links">
-                            <a href="https://github.com/alexcarter" class="social-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://linkedin.com/in/alexcarter" class="social-link">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://twitter.com/alexcarter" class="social-link">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://dribbble.com/alexcarter" class="social-link">
-                                <i class="fab fa-dribbble"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form-container">
-                    <div class="glass-card">
-                        <form class="contact-form" id="contact-form">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" value="John Doe" required>
-                                <span class="error-message"></span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" value="john@example.com" required>
-                                <span class="error-message"></span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" value="Project Collaboration" required>
-                                <span class="error-message"></span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required>Hi Alex, I'd like to work with you on an exciting web development project. Looking forward to hearing from you!</textarea>
-                                <span class="error-message"></span>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-full">
-                                <span class="btn-text">Send Message</span>
-                                <span class="btn-loading">
-                                    <i class="fas fa-spinner fa-spin"></i> Sending...
-                                </span>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Success Modal -->
-        <div class="modal" id="success-modal">
-            <div class="modal-content glass-card">
-                <div class="modal-header">
-                    <i class="fas fa-check-circle"></i>
-                    <h3>Message Sent Successfully!</h3>
-                </div>
-                <div class="modal-body">
-                    <p>Thank you for your message. I'll get back to you as soon as possible!</p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" id="close-modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2024 John Doe. All rights reserved.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Back to Top</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="js/theme.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/main.js"></script>
-</body>
+        <!-- Scripts -->
+        <script src="js/theme.js"></script>
+        <script src="js/animations.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
