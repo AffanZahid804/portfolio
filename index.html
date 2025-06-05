@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Frontend Developer</title>
+    <meta name="description" content="Frontend Developer specializing in modern web technologies and UI/UX design">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h3>John Doe</h3>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#resume" class="nav-link">Resume</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Hi, I'm <span class="gradient-text">John Doe</span></h1>
+                <div class="hero-subtitle">
+                    <span class="typing-text" id="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Passionate about creating beautiful, functional, and user-centered digital experiences. 
+                    I bring ideas to life through code and design.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="https://pixabay.com/get/g1689ae3d77ef864b773bedfbbac7e160fb7e9af222050b64a0e8a498349847e690a422d31bc5fd217f4fd176eacf50890c7878722fdb47c7e7737d1c3e8735de_1280.jpg" alt="Professional Developer" class="profile-img">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="glass-card">
+                        <h3>Hello! I'm John Doe</h3>
+                        <p>
+                            A passionate Frontend Developer with over 3 years of experience creating 
+                            digital experiences that are not only beautiful but also functional and 
+                            user-friendly. I specialize in modern web technologies and have a keen 
+                            eye for UI/UX design.
+                        </p>
+                        <p>
+                            When I'm not coding, you can find me exploring new design trends, 
+                            contributing to open-source projects, or sharing my knowledge through 
+                            technical writing and mentoring.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="skills-container">
+                    <div class="glass-card">
+                        <h3>Skills & Technologies</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="HTML5">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-item" data-skill="CSS3">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-item" data-skill="JavaScript">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item" data-skill="React">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="skill-item" data-skill="Node.js">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-item" data-skill="Git">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-item" data-skill="Sass">
+                                <i class="fab fa-sass"></i>
+                                <span>Sass</span>
+                            </div>
+                            <div class="skill-item" data-skill="Figma">
+                                <i class="fab fa-figma"></i>
+                                <span>Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="https://pixabay.com/get/g257064565d635ba7940ddbc649a8ee7c6fa5dcc735f8918a8c5916f6bac59895baf2401f992643ea2a351c1310a35d367570309cfadc11f1d9e4be70812558ea_1280.jpg" alt="E-commerce Platform">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="btn btn-sm btn-secondary">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-commerce Platform</h3>
+                        <p>A modern e-commerce platform built with React and Node.js, featuring user authentication, payment integration, and admin dashboard.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="https://pixabay.com/get/gd60543a69899651aa60f29c591dd4c2df3d70b38110e4e8433274d4cea97257f78b10770d4bf747b408ae53310e3f8bd634b9c51314fd214995ad1ebaf6cfc9d_1280.png" alt="Task Management App">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="btn btn-sm btn-secondary">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="https://pixabay.com/get/gbeb51e624a5beec480f8826d61cb10dd6a78ee69b4daa09c53a43fee01832b15a7bcc2a64b60a6812700816fcf934156b0d45e90c4a3b022d84042821c0ef03c_1280.jpg" alt="Portfolio Website">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="btn btn-sm btn-secondary">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Creative Portfolio</h3>
+                        <p>A stunning portfolio website for a creative agency, featuring smooth animations, interactive elements, and responsive design.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">GSAP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="https://pixabay.com/get/g18b91cc923015aad52363a0795ab729dde135d1c6c8c4768fb39db56388205af775aa453f42e8403203d1975330a30c17e19e4a8145ac2290a3e0e80b732ae31_1280.jpg" alt="Weather Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="btn btn-sm btn-secondary">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Dashboard</h3>
+                        <p>A comprehensive weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Weather API</span>
+                            <span class="tech-tag">Leaflet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience & Education</h2>
+                <p class="section-subtitle">My professional journey</p>
+            </div>
+            
+            <div class="resume-content">
+                <div class="timeline">
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2022 - Present</div>
+                            <h3>Senior Frontend Developer</h3>
+                            <h4>Tech Solutions Inc.</h4>
+                            <p>
+                                Leading frontend development for enterprise applications, mentoring junior developers, 
+                                and implementing modern React-based solutions. Improved application performance by 40% 
+                                and user engagement by 25%.
+                            </p>
+                            <div class="timeline-skills">
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>GraphQL</span>
+                                <span>Team Leadership</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2020 - 2022</div>
+                            <h3>Frontend Developer</h3>
+                            <h4>Digital Agency Co.</h4>
+                            <p>
+                                Developed responsive web applications for various clients, collaborated with design teams 
+                                to implement pixel-perfect UIs, and optimized applications for performance and accessibility.
+                            </p>
+                            <div class="timeline-skills">
+                                <span>Vue.js</span>
+                                <span>Sass</span>
+                                <span>Webpack</span>
+                                <span>API Integration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2019 - 2020</div>
+                            <h3>Junior Web Developer</h3>
+                            <h4>StartUp Studio</h4>
+                            <p>
+                                Built and maintained company websites, implemented responsive designs, 
+                                and gained experience in full-stack development while working in an agile environment.
+                            </p>
+                            <div class="timeline-skills">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2015 - 2019</div>
+                            <h3>Bachelor of Computer Science</h3>
+                            <h4>University of Technology</h4>
+                            <p>
+                                Graduated with honors, specializing in web technologies and software engineering. 
+                                Completed multiple projects including a final year project on modern web frameworks.
+                            </p>
+                            <div class="timeline-skills">
+                                <span>Computer Science</span>
+                                <span>Web Development</span>
+                                <span>Software Engineering</span>
+                                <span>Data Structures</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together on your next project</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="glass-card">
+                        <h3>Let's Connect</h3>
+                        <p>
+                            I'm always open to discussing new opportunities, interesting projects, 
+                            or just having a chat about web development and design.
+                        </p>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>john.doe@email.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>San Francisco, CA</span>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <div class="glass-card">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                                <span class="error-message"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                                <span class="error-message"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <span class="error-message"></span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading">
+                                    <i class="fas fa-spinner fa-spin"></i> Sending...
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Success Modal -->
+        <div class="modal" id="success-modal">
+            <div class="modal-content glass-card">
+                <div class="modal-header">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Message Sent Successfully!</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Thank you for your message. I'll get back to you as soon as possible!</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="close-modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 John Doe. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/theme.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

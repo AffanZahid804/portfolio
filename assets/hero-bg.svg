@@ -1,0 +1,57 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3366FF;stop-opacity:0.1" />
+      <stop offset="50%" style="stop-color:#B366FF;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#FF66B3;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF66B3;stop-opacity:0.08" />
+      <stop offset="100%" style="stop-color:#3366FF;stop-opacity:0.12" />
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="40"/>
+    </filter>
+  </defs>
+  
+  <!-- Background shapes -->
+  <circle cx="200" cy="150" r="120" fill="url(#gradient1)" filter="url(#blur)" opacity="0.6">
+    <animate attributeName="cy" values="150;180;150" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <ellipse cx="800" cy="300" rx="150" ry="100" fill="url(#gradient2)" filter="url(#blur)" opacity="0.4">
+    <animate attributeName="rx" values="150;180;150" dur="10s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <circle cx="1000" cy="600" r="80" fill="url(#gradient1)" filter="url(#blur)" opacity="0.5">
+    <animate attributeName="cx" values="1000;1050;1000" dur="12s" repeatCount="indefinite"/>
+  </circle>
+  
+  <path d="M0,400 Q300,350 600,400 T1200,400 L1200,800 L0,800 Z" fill="url(#gradient2)" opacity="0.3"/>
+  
+  <!-- Floating particles -->
+  <g opacity="0.7">
+    <circle cx="300" cy="200" r="3" fill="#3366FF" opacity="0.6">
+      <animate attributeName="cy" values="200;180;200" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="350" r="2" fill="#B366FF" opacity="0.5">
+      <animate attributeName="cy" values="350;330;350" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="750" cy="150" r="4" fill="#FF66B3" opacity="0.4">
+      <animate attributeName="cy" values="150;170;150" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="900" cy="450" r="2.5" fill="#3366FF" opacity="0.6">
+      <animate attributeName="cy" values="450;430;450" dur="9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Abstract geometric shapes -->
+  <g opacity="0.3">
+    <polygon points="100,100 150,50 200,100 150,150" fill="#3366FF" opacity="0.2">
+      <animateTransform attributeName="transform" type="rotate" values="0 150 100;360 150 100" dur="20s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon points="1050,200 1100,150 1150,200 1100,250" fill="#B366FF" opacity="0.15">
+      <animateTransform attributeName="transform" type="rotate" values="0 1100 200;-360 1100 200" dur="25s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+</svg>
