@@ -70,10 +70,11 @@ function initTypingEffect() {
     console.log('Typing element found, starting animation...');
     
     const texts = [
-        'Creative Frontend Developer',
-        'Web Developer', 
-        'UI Designer',
-        'JavaScript Enthusiast'
+        'Full Stack Developer',
+        'Frontend Developer',
+        'Backend Developer', 
+        'Database Designer',
+        'API Developer'
     ];
     
     let textIndex = 0;
@@ -412,7 +413,7 @@ window.addEventListener('error', function(e) {
 
 // Console welcome message
 console.log(`
-🚀 Welcome to Alex Carter's Portfolio!
+🚀 Welcome to Affan Zahid's Portfolio!
 🎨 Built with vanilla HTML, CSS, and JavaScript
 💡 Featuring glassmorphism design and smooth animations
 📱 Fully responsive and accessible
