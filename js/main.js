@@ -9,8 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeApp() {
     initNavigation();
     initTypingEffect();
-    initContactForm();
-    // initScrollReveal();
     initSmoothScrolling();
     initScrollSpy();
 }
@@ -71,10 +69,10 @@ function initTypingEffect() {
     
     const texts = [
         'Full Stack Developer',
-        'Frontend Developer',
-        'Backend Developer', 
-        'Database Designer',
-        'API Developer'
+        'Full Stack Developer',
+        'Full Stack Developer',
+        'Full Stack Developer',
+        'Full Stack Developer'
     ];
     
     let textIndex = 0;
@@ -116,125 +114,6 @@ function initTypingEffect() {
     }, 1000);
 }
 
-// Contact form functionality
-function initContactForm() {
-    const form = document.getElementById('contact-form');
-    const modal = document.getElementById('success-modal');
-    const closeModal = document.getElementById('close-modal');
-    
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Clear previous errors
-            clearFormErrors();
-            
-            // Validate form
-            if (validateForm()) {
-                // Show loading state
-                const submitBtn = form.querySelector('button[type="submit"]');
-                submitBtn.classList.add('loading');
-                
-                // Simulate form submission (replace with actual API call)
-                setTimeout(() => {
-                    submitBtn.classList.remove('loading');
-                    form.reset();
-                    showSuccessModal();
-                }, 2000);
-            }
-        });
-    }
-    
-    // Modal close functionality
-    if (closeModal) {
-        closeModal.addEventListener('click', function() {
-            modal.classList.remove('active');
-        });
-    }
-    
-    // Close modal when clicking outside
-    if (modal) {
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-            }
-        });
-    }
-}
-
-// Form validation
-function validateForm() {
-    const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const subject = document.getElementById('subject');
-    const message = document.getElementById('message');
-    
-    let isValid = true;
-    
-    // Name validation
-    if (!name.value.trim()) {
-        showFieldError(name, 'Name is required');
-        isValid = false;
-    } else if (name.value.trim().length < 2) {
-        showFieldError(name, 'Name must be at least 2 characters');
-        isValid = false;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email.value.trim()) {
-        showFieldError(email, 'Email is required');
-        isValid = false;
-    } else if (!emailRegex.test(email.value.trim())) {
-        showFieldError(email, 'Please enter a valid email address');
-        isValid = false;
-    }
-    
-    // Subject validation
-    if (!subject.value.trim()) {
-        showFieldError(subject, 'Subject is required');
-        isValid = false;
-    }
-    
-    // Message validation
-    if (!message.value.trim()) {
-        showFieldError(message, 'Message is required');
-        isValid = false;
-    } else if (message.value.trim().length < 10) {
-        showFieldError(message, 'Message must be at least 10 characters');
-        isValid = false;
-    }
-    
-    return isValid;
-}
-
-// Show field error
-function showFieldError(field, message) {
-    const formGroup = field.closest('.form-group');
-    const errorMessage = formGroup.querySelector('.error-message');
-    
-    formGroup.classList.add('error');
-    errorMessage.textContent = message;
-}
-
-// Clear form errors
-function clearFormErrors() {
-    const formGroups = document.querySelectorAll('.form-group');
-    formGroups.forEach(group => {
-        group.classList.remove('error');
-        const errorMessage = group.querySelector('.error-message');
-        errorMessage.textContent = '';
-    });
-}
-
-// Show success modal
-function showSuccessModal() {
-    const modal = document.getElementById('success-modal');
-    if (modal) {
-        modal.classList.add('active');
-    }
-}
-
 // Smooth scrolling for navigation links
 function initSmoothScrolling() {
     const links = document.querySelectorAll('a[href^="#"]');
@@ -249,10 +128,8 @@ function initSmoothScrolling() {
             if (targetSection) {
                 const headerOffset = 80;
                 const elementPosition = targetSection.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                
-                window.scrollTo({
-                    top: offsetPosition,
+                window.scrollBy({
+                    top: elementPosition - headerOffset,
                     behavior: 'smooth'
                 });
             }
@@ -260,26 +137,25 @@ function initSmoothScrolling() {
     });
 }
 
-// ScrollSpy functionality
+// Scroll spy for active navigation links
 function initScrollSpy() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
     
     function updateActiveLink() {
-        let current = '';
+        let currentActive = '';
         
         sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
+            const sectionTop = section.offsetTop - 100; // Adjust offset for header
             const sectionHeight = section.clientHeight;
-            
-            if (sectionTop <= 100 && sectionTop + sectionHeight > 100) {
-                current = section.getAttribute('id');
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                currentActive = section.getAttribute('id');
             }
         });
         
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
+            if (link.getAttribute('href').includes(currentActive)) {
                 link.classList.add('active');
             }
         });
@@ -289,97 +165,83 @@ function initScrollSpy() {
     updateActiveLink(); // Initial call
 }
 
-// Scroll reveal animations
+// Initialize ScrollReveal
 function initScrollReveal() {
-    // const revealElements = document.querySelectorAll('.glass-card, .project-card, .timeline-item, .skill-item');
-    
-    // function revealOnScroll() {
-    //     revealElements.forEach(element => {
-    //         const elementTop = element.getBoundingClientRect().top;
-    //         const elementVisible = 150;
-            
-    //         if (elementTop < window.innerHeight - elementVisible) {
-    //             element.classList.add('reveal');
-    //         }
-    //     });
-    // }
-    
-    // // Add reveal classes with staggered delays
-    // revealElements.forEach((element, index) => {
-    //     element.style.transitionDelay = `${index * 0.1}s`;
-    // });
-    
-    // window.addEventListener('scroll', throttle(revealOnScroll, 100));
-    // revealOnScroll(); // Initial call
+    if (typeof ScrollReveal !== 'undefined') {
+        ScrollReveal().reveal('.hero-content, .section-header, .about-content, .projects-grid, .timeline-item, .contact-info, .contact-form-container', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            interval: 100,
+            easing: 'ease-in-out',
+            reset: false
+        });
+    } else {
+        console.warn('ScrollReveal not loaded. Skipping animations.');
+    }
 }
 
-// Utility function to throttle scroll events
+// Utility function for throttling
 function throttle(func, wait) {
-    let timeout;
+    let inThrottle, lastFn, lastTime;
     return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            lastTime = Date.now();
+            inThrottle = true;
+        } else {
+            clearTimeout(lastFn);
+            lastFn = setTimeout(function() {
+                if (Date.now() - lastTime >= wait) {
+                    func.apply(context, args);
+                    lastTime = Date.now();
+                }
+            }, Math.max(wait - (Date.now() - lastTime), 0));
+        }
     };
 }
 
-// Utility function to debounce events
+// Utility function for debouncing
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
+        const context = this;
         const later = () => {
-            clearTimeout(timeout);
-            func(...args);
+            timeout = null;
+            func.apply(context, args);
         };
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
 }
 
-// Skill item hover effects
-// document.addEventListener('DOMContentLoaded', function() {
-//     const skillItems = document.querySelectorAll('.skill-item');
-    
-//     skillItems.forEach(item => {
-//         item.addEventListener('mouseenter', function() {
-//             const skill = this.getAttribute('data-skill');
-//             if (skill) {
-//                 // Add pulse animation
-//                 this.style.animation = 'pulse 0.6s ease-in-out';
-                
-//                 // Reset animation
-//                 setTimeout(() => {
-//                     this.style.animation = '';
-//                 }, 600);
-//             }
-//         });
-//     });
-// });
-
-// Performance optimization: Lazy load images
+// Lazy loading images
 function initLazyLoading() {
-    const images = document.querySelectorAll('img[data-src]');
+    const lazyImages = document.querySelectorAll('img[data-src]');
     
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                imageObserver.unobserve(img);
-            }
+    if ('IntersectionObserver' in window) {
+        const lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    const lazyImage = entry.target;
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.removeAttribute('data-src');
+                    lazyImageObserver.unobserve(lazyImage);
+                }
+            });
         });
-    });
-    
-    images.forEach(img => imageObserver.observe(img));
-}
-
-// Initialize lazy loading if supported
-if ('IntersectionObserver' in window) {
-    document.addEventListener('DOMContentLoaded', initLazyLoading);
+        
+        lazyImages.forEach(function(lazyImage) {
+            lazyImageObserver.observe(lazyImage);
+        });
+    } else {
+        // Fallback for browsers that don't support Intersection Observer
+        lazyImages.forEach(function(lazyImage) {
+            lazyImage.src = lazyImage.dataset.src;
+            lazyImage.removeAttribute('data-src');
+        });
+    }
 }
 
 // Keyboard navigation support

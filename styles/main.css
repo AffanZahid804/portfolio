@@ -144,6 +144,18 @@ p {
   padding: 0 var(--space-lg);
 }
 
+.contact .container {
+  padding-left: var(--space-2xl);
+  margin-left: 0;
+  margin-right: auto;
+}
+.contact .section-header {
+  text-align: left;
+  max-width: 600px;
+  margin-left: 0;
+  padding-left: var(--space-md);
+}
+
 /* Glass Card Effect */
 .glass-card {
   background: hsl(var(--glass-bg));
@@ -241,8 +253,8 @@ p {
 
 /* Section Headers */
 .section-header {
-  text-align: center;
   margin-bottom: var(--space-3xl);
+  text-align: center;
 }
 
 .section-title {
@@ -255,6 +267,19 @@ p {
   color: hsl(var(--text-muted));
   max-width: 600px;
   margin: 0 auto;
+}
+
+.contact .section-header {
+  text-align: left;
+  max-width: 600px;
+  margin-left: 0;
+}
+
+.contact .section-title,
+.contact .section-subtitle {
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
 }
 
 /* Navigation */
@@ -615,6 +640,7 @@ p {
 .project-content h3 {
   margin-bottom: var(--space-sm);
   color: hsl(var(--text-primary));
+  font-size: 1.1rem;
 }
 
 .project-content p {
@@ -741,9 +767,16 @@ p {
 
 .contact-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* Two columns for contact info and tiles */
   gap: var(--space-3xl);
-  align-items: start;
+  align-items: flex-start;
+  justify-content: space-between; /* Adjusted to spread items */
+}
+
+.contact-info {
+  margin-left: 0;
+  max-width: 600px;
+  width: 100%;
 }
 
 .contact-info h3 {
@@ -1027,4 +1060,104 @@ p {
 .reveal-right.active {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* Tiles Section */
+.tiles {
+  justify-self: end;
+  padding-left: 20%;
+}
+
+.tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  margin-left: auto;
+  max-width: 95%;
+}
+
+.tile {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  height: auto; /* Will be set by JS on expand */
+  transition: all 0.3s ease-out;
+  padding: var(--space-md); /* Reduced padding to decrease height */
+}
+
+.tile .brief-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Keep 2 lines for brief explanation */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: var(--space-sm); /* Adjusted margin */
+}
+
+.tile h3 {
+  margin-bottom: var(--space-sm);
+  font-size: 1.25rem; /* Slightly smaller heading */
+}
+
+.tile .expanded-content {
+  display: none; /* Hidden by default */
+}
+
+.tile .see-more {
+  display: block;
+  margin-top: var(--space-sm);
+  color: hsl(var(--primary));
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.tile .close-tile {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: hsl(var(--text-muted));
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  z-index: 10;
+}
+
+/* Expanded Tile State */
+.tile.active {
+  height: auto !important; /* Override JS fixed height on expand */
+}
+
+.tile.active .brief-text {
+  display: none;
+}
+
+.tile.active .expanded-content {
+  display: block;
+  /* Ensure content is not clamped when expanded */
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.tile.active .see-more {
+  display: none;
+}
+
+.tile.active .close-tile {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tiles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expanded-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
 }

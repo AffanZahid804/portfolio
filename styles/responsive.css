@@ -31,6 +31,10 @@
     gap: var(--space-lg);
   }
   
+  .tiles-grid {
+    grid-template-columns: 1fr;
+  }
+  
   /* Timeline adjustments */
   .timeline::before {
     left: 30px;
@@ -194,6 +198,12 @@
   /* Modal Mobile */
   .modal-content {
     margin: var(--space-lg);
+  }
+  
+  .tiles-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -394,5 +404,26 @@ textarea:focus {
   .nav-menu::-webkit-scrollbar-thumb {
     background: hsl(var(--primary));
     border-radius: 2px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .tiles-grid {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .tiles-grid {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tiles-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin-left: 0;
   }
 }
