@@ -205,6 +205,36 @@
     max-width: 100%;
     margin-left: 0;
   }
+  
+  .glass-card,
+  .project-card,
+  .tile {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto var(--space-lg) auto;
+    padding: var(--space-lg) var(--space-md);
+    font-size: 1rem;
+  }
+  
+  .projects-grid,
+  .tiles-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .container {
+    padding: 0 var(--space-sm);
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  
+  .section-header {
+    margin-bottom: var(--space-xl);
+  }
 }
 
 /* Small Mobile Styles */
@@ -244,8 +274,11 @@
     font-size: 2rem;
   }
   
-  .glass-card {
-    padding: var(--space-lg);
+  .glass-card,
+  .project-card,
+  .tile {
+    padding: var(--space-md) var(--space-xs);
+    font-size: 0.95rem;
   }
   
   .skills-grid {
